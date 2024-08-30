@@ -13,7 +13,7 @@ class userController extends Controller
     public function createAdmin() {
         // Crear un usuario con un estado específico 'is_admin'
         //$admin = 
-        User::factory()->state(['is_admin' => true,] )->create();
+        User::factory()->state(['is_admin' => true, 'lastName' => 'Admin',] )->create();
         echo 'usuario admin creado';
     }
 }
