@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('servicios', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('descripcion')->nullable();
@@ -23,7 +23,7 @@ return new class extends Migration
         
         $fechaDesarrollo = new DateTime('2024-08-29 20:10:00');
         // Insertar registro id 1 -> aplicacion 'Spa Felicidad'
-        DB::table('services')->insert([
+        DB::table('servicios')->insert([
             'name' => 'tpi-mds1-p1',
             'descripcion' => 'TPI Metodología de Sistemas 1 - Parte 1. (No estoy cursando, hago este proyecto por cuenta propia e individual)',
             'precio' => 99999.00,
@@ -41,6 +41,6 @@ return new class extends Migration
         // Eliminar registros dependientes antes de eliminar la tabla
         //DB::table('comentarios')->whereNotNull('service_id')->delete();
 
-        Schema::dropIfExists('services');   // esquema creado en up()
+        Schema::dropIfExists('servicios');   // esquema creado en up()
     }
 };

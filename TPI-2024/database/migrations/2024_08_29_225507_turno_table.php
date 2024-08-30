@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();   // created_at, update_at
 
             // Definición de las llaves foráneas
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            $table->foreign('service_id')->references('id')->on('servicios')->onDelete('cascade');
             $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
         });
         

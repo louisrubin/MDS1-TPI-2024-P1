@@ -20,7 +20,7 @@ return new class extends Migration
 
             // Definición de las llaves foráneas
             $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+            $table->foreign('service_id')->references('id')->on('servicios')->onDelete('cascade');
         });
     }
 
